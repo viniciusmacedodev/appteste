@@ -18,6 +18,7 @@ export class Page1Page {
       let isEmpty = true;
 
       this.user.name = "Fulano";
+      console.log(this.user.name);
 
       for (var i in navParams.get('name')) {
         if(navParams.get('name').hasOwnProperty(i)) {
@@ -26,12 +27,13 @@ export class Page1Page {
         }
       }
 
-      if(isEmpty) {
-        this.user.name = "";
-      }
-      else {
+        if(isEmpty) {
+          this.user.name = "";
+        }
+        else {
         this.user.name = navParams.get('name');
       }
+      console.log(this.user.name);
       // console.log(Object.keys(this.user.name).length);
       //
       // if (navParams.get('name').length == 0){
@@ -42,6 +44,10 @@ export class Page1Page {
       // }
       // this.user.name = navParams.get('name') || "Fulano";
       // console.log(this.user);
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad Page2Page');
   }
 
   openPage(user) {
