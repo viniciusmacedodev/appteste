@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page 2</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form (ngSubmit)="openPage(user)">
+    <ion-list>
+      <ion-item id="edititem">
+        <ion-label fixed>Usuário</ion-label>
+        <ion-input type="text" name="name" [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div id="btnconfirmar">
+      <button ion-button full type="submit">Confirmar</button>
+    </div>
+  </form>
+
+  <div id="btncancelar">
+    <button ion-button full color="danger" (click)="closePage()">Cancelar</button>
+  </div>
+</ion-content>
