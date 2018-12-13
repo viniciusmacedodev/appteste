@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page 1</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div id="textview">
+    <h2 center *ngIf="user.name.length">
+      Oi, {{user?.name}}!
+    </h2>
+    <h2 center *ngIf="user.name.length == 0">
+      Oi!
+    </h2>
+  </div>
+
+  <div id="btntrocar">
+    <button ion-button full (click)="openPage(user)">Trocar Usuário</button>
+  </div>
+</ion-content>
